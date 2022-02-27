@@ -9,10 +9,14 @@
     <tbody>
     <% repositories.each do |repository| %>
       <tr>
-        <td><%= repository %></td>
-        <td><%= repository %></td>
+        <td><%= repository['name'] %></td>
+        <td><a href="<%= repository['html_url'] targe='_blank' %>">Link</a> </td>
       </tr>
     <% end %>
     </tbody>
   </table>
 </div>
+<%if repositories.length > 0 %>
+  <%= link_to "&laquo; Previous".html_safe, github_repositories_path(page: page - 1), class: "previous", remote: true %>
+  <%= link_to "&raquo; Next".html_safe, github_repositories_path(page: page + 1), class: "next", remote: true %>
+<% end %>

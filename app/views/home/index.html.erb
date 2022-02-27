@@ -2,8 +2,8 @@
 <%= form_tag github_repositories_path, :method => 'get', remote: true do %>
   <%= text_field_tag :query, params[:query] %>
   <%= submit_tag("Search", :name => nil) %>
-  <%= select_tag 'select_id', options_for_select([ "Bestmatch", "LeastKnown" ], "Bestmatch") %>
+  <%= select_tag 'select_id', options_for_select([ ["Bestmatch", 1], ["Most popular", 2] ]) %>
 <%end%>
  <div id="repos-table">
-  <%= render 'repos-table', remote: true, repositories: [] %>
+  <%= render 'repos-table', repositories: [], page: 1 %>
 </div> 

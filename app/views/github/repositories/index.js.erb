@@ -1,1 +1,2 @@
-$('#repos-table').html("<%= j (render 'home/repos-table', repositories: @repositories) %>")
+$('#repos-table').
+html("<%= j (render 'home/repos-table', repositories: @repositories, page: @page) %>")
