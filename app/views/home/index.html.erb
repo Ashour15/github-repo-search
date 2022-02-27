@@ -1,0 +1,9 @@
+<h1> Search Github public repositories</h1>
+<%= form_tag github_repositories_path, :method => 'get', remote: true do %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag("Search", :name => nil) %>
+  <%= select_tag 'select_id', options_for_select([ "Bestmatch", "LeastKnown" ], "Bestmatch") %>
+<%end%>
+ <div id="repos-table">
+  <%= render 'repos-table', remote: true, repositories: [] %>
+</div> 
