@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  web:
+    build: .
+    command: bash -c "./entrypoint.sh"
+    volumes:
+      - .:/myapp
+    ports:
+     - "3000:3000"
+
+
+
+
+
+
+
