@@ -1,2 +1,6 @@
-$('#repos-table').
-html("<%= j (render 'home/repos-table', repositories: @repositories, page: @page) %>")
+<% if @repositories %>
+  $('#repos-table').
+    html("<%= j (render 'home/repos-table', repositories: @repositories, page: @page, query: @query) %>");
+<% else %>
+  $("#flash").html('<%= j render partial: "shared/notice_banner" %>');
+<% end %>
