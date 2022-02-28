@@ -1,24 +1,33 @@
-# README
+# Github repo search service
+Create an API to search public github repostiories using a keyword
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Built With
 
-Things you may want to cover:
+* Ruby 3.0.0
+* Ruby On Rails 6.1.4
+* Puma 5.0
 
-* Ruby version
+### Important Gems used
+* api_cache
 
-* System dependencies
+##### 1. Check out the repository
 
-* Configuration
+```bash
+git clone git@github.com:Ashour15/property_service.git
+```
 
-* Database creation
+##### 2. Use docker to run and setup the server
 
-* Database initialization
+```ruby
+sudo docker-compose up --build
+```
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+ <!-- ROADMAP -->
+## Roadmap
 
-* Deployment instructions
+- [] Write unit tests
+- [] Add sorting option 
+- [] Install memcached to use for api caching instead of using the internal server memory
+- [] Enhance the UI/Design
 
-* ...
